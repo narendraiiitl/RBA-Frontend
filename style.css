@@ -1,0 +1,22 @@
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: rgb(231, 231, 231);
+}
+.topgap{
+    margin-top: 10%;
+}
+.bottomgap{
+    margin-bottom: 5px;
+}
