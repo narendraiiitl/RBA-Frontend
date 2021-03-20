@@ -42,7 +42,6 @@
             name="name"
             required=""
             autofocus=""
-
           />
           <label for="inputEmail" class="visually-hidden">Email address</label>
           <input
@@ -63,16 +62,25 @@
             name="password"
             required=""
           />
-          <select id="role" class="form-select" aria-label="Default select example">
+          <select
+            id="role"
+            class="form-select"
+            aria-label="Default select example"
+          >
             <option selected>Select Role</option>
             <option value="Admin">Admin</option>
-            <option value="Faculty">Faculty</option>
-            <option value="Student">Student</option>
+            <option value="Moderator">Faculty</option>
+            <option value="Member">Student</option>
           </select>
           <button id="submit" class="w-100 btn btn-lg btn-primary topgap">
             Sign up
           </button>
-          <a class="mt-5 mb-3 text-muted" href="./signin.html" style="text-decoration: none;">Already have a account? Sign In</a>
+          <a
+            class="mt-5 mb-3 text-muted"
+            href="./signin.html"
+            style="text-decoration: none"
+            >Already have a account? Sign In</a
+          >
         </form>
       </main>
     </section>

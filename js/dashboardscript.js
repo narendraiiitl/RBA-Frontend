@@ -44,21 +44,21 @@ const getdetails = () => {
 }
 
 
-// const invokeRefreshToken = () => {
-//     setInterval(() => {
-//         let refreshToken = Cookies.get('refreshToken');
-//         axios.post('http://localhost:3000/auth/refresh-token', {
-//             refreshToken
-//         }).then((response) => {
-//             const { accessToken, refreshToken } = response.data;
-//             Cookies.set('accessToken', accessToken);
-//             Cookies.set('refreshToken', refreshToken);
-//         })
-//             .catch((err) => console.log(err));
+const invokeRefreshToken = () => {
+    setInterval(() => {
+        let refreshToken = Cookies.get('refreshToken');
+        axios.post('http://localhost:3000/auth/refresh-token', {
+            refreshToken
+        }).then((response) => {
+            const { accessToken, refreshToken } = response.data;
+            Cookies.set('accessToken', accessToken);
+            Cookies.set('refreshToken', refreshToken);
+        })
+            .catch((err) => console.log(err));
 
-//     }, 59000);
-// }
+    }, 59000);
+}
 
 getProfile();
-// invokeRefreshToken();
+invokeRefreshToken();
 

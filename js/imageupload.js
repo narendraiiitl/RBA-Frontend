@@ -3,7 +3,7 @@ const upload = document.getElementById("upload");
 const postimages = document.getElementById("postimages");
 const deletebtn = document.getElementsByClassName("delete");
 
-const newpost = (url, by, _id) => {
+const newpost = (url, by, _id, username) => {
     return `<div class="col" style="margin-bottom: 4%" data-id=${_id}>
     <div class="card " style="width: 18rem">
       <img
@@ -15,7 +15,7 @@ const newpost = (url, by, _id) => {
       />
       <div class="card-body">
         <h5 class="card-title">Posted By</h5>
-        <p class="card-text">${by}</p>
+        <p class="card-text">${username}</p>
         <p
         onclick="handleDelete(event)"
         class="btn btn-danger delete"
@@ -61,8 +61,8 @@ const uploadimage = (data) => {
         }
     }).then(response => {
         console.log(response.data);
-        let { imageurl, uploader, _id } = response.data;
-        let doc = document.createRange().createContextualFragment(newpost(imageurl, uploader, _id));
+        let { imageurl, uploader, _id, username } = response.data;
+        let doc = document.createRange().createContextualFragment(newpost(imageurl, uploader, _id, username));
         postimages.appendChild(doc);
         upload.style.backgroundColor = "green";
         upload.innerHTML = "Successfully Uploaded";
@@ -95,7 +95,8 @@ const getimage = () => {
         console.log(response.data);
         for (let i = 0; i < response.data.length; i++) {
             let { imageurl, uploader, _id } = response.data[i];
-            let doc = document.createRange().createContextualFragment(newpost(imageurl, uploader, _id));
+            let { email, name } = uploader;
+            let doc = document.createRange().createContextualFragment(newpost(imageurl, email, _id, name));
             postimages.appendChild(doc);
         }
     })

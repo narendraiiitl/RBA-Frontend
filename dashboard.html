@@ -132,73 +132,26 @@
               >
             </li>
             <li class="nav-item">
-              <button class="btn btn-outline-light nav-item">Logout</button>
+              <button id="logout" class="btn btn-outline-light nav-item">Logout</button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <section class="container">
-      <section style="padding: 2%" id="postimages" class="row row-cols-4">
-        <div class="col" style="margin-bottom: 4%" data-id="1">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://picsum.photos/200/300"
-              class="card-img-top"
-              width="300"
-              height="300"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Posted By</h5>
-              <p class="card-text">Admin</p>
-              <p onclick="handleDelete(event)" class="btn btn-danger delete">
-                Delete
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="margin-bottom: 4%" data-id="1">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://picsum.photos/200/300"
-              class="card-img-top"
-              width="300"
-              height="300"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Posted By</h5>
-              <p class="card-text">Admin</p>
-              <p onclick="handleDelete(event)" class="btn btn-danger delete">
-                Delete
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col" style="margin-bottom: 4%" data-id="1">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://picsum.photos/200/300"
-              class="card-img-top"
-              width="300"
-              height="300"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Posted By</h5>
-              <p class="card-text">Admin</p>
-              <p onclick="handleDelete(event)" class="btn btn-danger delete">
-                Delete
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section
+        style="padding: 2%"
+        id="postimages"
+        class="row row-cols-4"
+      ></section>
     </section>
 
     <section class="myfloat">
-      <div id="myform" class="shadow p-3 mb-3 bg-body rounded" style="visibility: hidden;">
+      <div
+        id="myform"
+        class="shadow p-3 mb-3 bg-body rounded"
+        style="visibility: hidden"
+      >
         <input
           type="text"
           id="imageURL"
@@ -220,5 +173,6 @@
     <script src="./js/dashboardscript.js"></script>
     <script src="./js/imageupload.js"></script>
     <script src="./js/postform.js"></script>
+    <script src="./js/logout.js"></script>
   </body>
 </html>
