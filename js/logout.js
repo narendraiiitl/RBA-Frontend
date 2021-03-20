@@ -8,6 +8,7 @@ logout.addEventListener("click", () => {
         }
     }).then(function (response) {
         console.log("Logged Out successfully")
+        window.location.replace('/signin.html');
     })
         .catch(err => {
             console.log(err);

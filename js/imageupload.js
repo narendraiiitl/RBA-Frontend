@@ -66,6 +66,7 @@ const uploadimage = (data) => {
         postimages.appendChild(doc);
         upload.style.backgroundColor = "green";
         upload.innerHTML = "Successfully Uploaded";
+
     })
         .catch(err => {
             console.log(err);

@@ -15,8 +15,10 @@ submit.addEventListener('click', () => {
         window.location.replace('./dashboard.html');
     })
         .catch(function (error) {
+            alertify.error("Invalid Email/Password.");
             console.log(error);
             inputEmail.value = "";
             inputPassword.value = "";
+
         });
 })

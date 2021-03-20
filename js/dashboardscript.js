@@ -1,6 +1,7 @@
 const accessToken = Cookies.get('accessToken');
 const userimage = document.getElementById('userimage');
 const username = document.getElementById('username');
+const userrole = document.getElementById('userrole');
 const alert = document.getElementById('alert');
 
 const successAlert = `<div class="alert alert-success"> 
@@ -23,6 +24,7 @@ const getProfile = () => {
 
         userimage.src = `https://avatars.abstractapi.com/v1/?api_key=c312bbe42aac4d9f8fc3eee5dcb62f24&name=${response.data.name}`;
         username.innerText = response.data.name
+        userrole.innerText = response.data.role
     })
 }
 
