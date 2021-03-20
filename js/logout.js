@@ -2,7 +2,7 @@ const logout = document.getElementById('logout');
 const refreshToken = Cookies.get('refreshToken');
 logout.addEventListener("click", () => {
     console.log("clicked");
-    axios.delete('http://localhost:3000/auth/logout', {
+    axios.delete('https://dry-cliffs-95328.herokuapp.com/auth/logout', {
         data: {
             refreshToken
         }

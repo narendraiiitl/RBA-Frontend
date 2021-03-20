@@ -36,7 +36,7 @@ function handleDelete(e) {
 
 
 const deleteimage = (imageid, cur) => {
-    axios.delete('http://localhost:3000/api/deleteimage', {
+    axios.delete('https://dry-cliffs-95328.herokuapp.com/api/deleteimage', {
         headers: {
             authorization: 'Bearer ' + accessToken
         },
@@ -55,7 +55,7 @@ const deleteimage = (imageid, cur) => {
 
 
 const uploadimage = (data) => {
-    axios.post('http://localhost:3000/api/uploadimage', { imageurl: data }, {
+    axios.post('https://dry-cliffs-95328.herokuapp.com/api/uploadimage', { imageurl: data }, {
         headers: {
             authorization: 'Bearer ' + accessToken
         }
@@ -88,7 +88,7 @@ upload.addEventListener("click", async () => {
 
 
 const getimage = () => {
-    axios.get('http://localhost:3000/api/showimage', {
+    axios.get('https://dry-cliffs-95328.herokuapp.com/api/showimage', {
         headers: {
             authorization: 'Bearer ' + accessToken
         }

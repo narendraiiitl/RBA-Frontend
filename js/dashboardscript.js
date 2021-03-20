@@ -16,7 +16,7 @@ const failureAlert = `<div class="alert alert-warning">
 
 const getProfile = () => {
 
-    axios.get('http://localhost:3000/api/profile', {
+    axios.get('https://dry-cliffs-95328.herokuapp.com/api/profile', {
         headers: {
             authorization: 'Bearer ' + accessToken
         }
@@ -30,7 +30,7 @@ const getProfile = () => {
 
 
 const getdetails = () => {
-    axios.get('http://localhost:3000/api/ping', {
+    axios.get('https://dry-cliffs-95328.herokuapp.com/api/ping', {
         headers: {
             authorization: 'Bearer ' + accessToken
         }
@@ -49,7 +49,7 @@ const getdetails = () => {
 const invokeRefreshToken = () => {
     setInterval(() => {
         let refreshToken = Cookies.get('refreshToken');
-        axios.post('http://localhost:3000/auth/refresh-token', {
+        axios.post('https://dry-cliffs-95328.herokuapp.com/auth/refresh-token', {
             refreshToken
         }).then((response) => {
             const { accessToken, refreshToken } = response.data;

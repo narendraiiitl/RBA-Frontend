@@ -6,7 +6,7 @@ const inputPassword = document.getElementById('inputPassword');
 
 submit.addEventListener('click', () => {
     console.log(role.value);
-    axios.post('http://localhost:3000/auth/register', {
+    axios.post('https://dry-cliffs-95328.herokuapp.com/auth/register', {
         Email: inputEmail.value,
         Password: inputPassword.value,
         Name: inputName.value,
